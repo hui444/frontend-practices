@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryDirectory": "lib", // default: lib
+        "style": true
+      }
+    ] // `style: true` for less
+  ]
+}
