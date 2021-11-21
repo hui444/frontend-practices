@@ -1,0 +1,4 @@
+@function clr($section, $color: section) {
+  $color: map-get(map-get($colors, $section), $color);
+  @return $color;
+}

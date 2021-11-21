@@ -1,8 +1,15 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  z-index: 0;
 }
 
 /* Remove default margin */
@@ -55,6 +62,7 @@ button,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -83,42 +91,227 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
+  border-top: 3px solid #67bece;
+  width: 300px;
+  height: 200px;
+  background: #fafafa;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 15px 25px;
+}
+.card-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: 20ch;
+}
+.card-container h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: right;
+}
+.card-container p {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.card-button {
+  background-color: #f9c7c5;
+  padding: 3px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 13px;
+  line-height: 24px;
+}
+.card-button:focus, .card-button:hover {
+  background-color: #fab0ae;
+}
+
+.card-link {
+  color: #29b2cb;
+  text-decoration: none;
+}
+.card-link:focus, .card-link:hover {
+  color: #67bece;
+}
+
+.fm-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #dce5e6;
+  border-radius: 8px;
+}
+
+.fm-card-image-container {
+  flex: 1 1 60%;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+}
+.fm-card-image-container img {
+  transition: transform 0.3s ease 0s;
+  object-fit: cover;
+}
+.fm-card-image-container:hover img {
+  transition: transform 0.3s ease 0s;
+  transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
+.fm-card-content {
+  flex: 1 1 40%;
+  padding: 15px 20px 20px;
+}
+.fm-card-content h3 {
+  font-weight: normal;
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #1c2022;
+}
+.fm-card-content h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.fm-card-content p {
+  font-size: 12px;
+  color: #737373;
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fm-challenge-link {
+  font-size: 13px;
+  color: #29b2cb;
+  text-decoration: none;
+}
+.fm-challenge-link:focus, .fm-challenge-link:hover {
+  color: #67bece;
+}
+
+.fm-card-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.fm-card-language-tags {
+  font-size: clamp(12px, 0.85rem, 24px);
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+.fm-card-language-tags li {
+  list-style-type: none;
+  display: inline-block;
+}
+.fm-card-language-tags li + li {
+  margin-left: 10px;
+}
+
+.fm-html-tag {
+  color: #6abecd;
+}
+
+.fm-css-tag {
+  color: #3e54a3;
+}
+
+.fm-js-tag {
+  color: #e13784;
+}
+
+.fm-api-tag {
+  color: #85c20a;
+}
+
+.fm-card-difficulty-tag {
+  font-size: clamp(12px, 0.85rem, 24px);
+  display: flex;
+  border-radius: 4px;
+  font-weight: 600;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+.fm-newbie {
+  border: 1px solid rgba(20, 194, 200, 0.15);
+}
+.fm-newbie .fm-difficulty-num {
+  background: #14c2c8;
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+.fm-newbie .fm-difficulty-text {
+  color: #14c2c8;
+  padding: 2px 10px;
+}
+
+.fm-junior {
+  border: 1px solid rgba(170, 215, 66, 0.15);
+}
+.fm-junior .fm-difficulty-num {
+  background: #aad742;
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+.fm-junior .fm-difficulty-text {
+  color: #aad742;
+  padding: 2px 10px;
+}
+
+.fm-intermediate {
+  border: 1px solid rgba(241, 182, 4, 0.15);
+}
+.fm-intermediate .fm-difficulty-num {
+  background: #f1b604;
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+.fm-intermediate .fm-difficulty-text {
+  color: #f1b604;
+  padding: 2px 10px;
+}
+
+.fm-advanced {
+  border: 1px solid rgba(244, 137, 37, 0.15);
+}
+.fm-advanced .fm-difficulty-num {
+  background: #f48925;
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+.fm-advanced .fm-difficulty-text {
+  color: #f48925;
+  padding: 2px 10px;
+}
+
+.fm-guru {
+  border: 1px solid rgba(235, 82, 82, 0.15);
+}
+.fm-guru .fm-difficulty-num {
+  background: #eb5252;
+  color: #fff;
+  text-align: center;
+  padding: 2px 10px;
+}
+.fm-guru .fm-difficulty-text {
+  color: #eb5252;
+  padding: 2px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

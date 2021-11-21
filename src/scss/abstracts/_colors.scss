@@ -1,8 +1,25 @@
-$colors: (
-  primary: (
-    // blue
-    300: 216 87% 60%,
-    400: 216 87% 40%,
-    500: 216 87% 20%,
-  ),
+//website card
+$card-blue: #67bece;
+$card-pink: #f9c7c5;
+$card-background: #fafafa;
+$card-pink__active: #fab0ae;
+$card-link-blue: #29b2cb;
+$card-link-blue__active: $card-blue;
+
+//frontendMentor card
+$fm-card-border: #dce5e6;
+$fm-title-text: #1c2022;
+$fm-description-text: #737373;
+$tag-colors: (
+  html-tag: #6abecd,
+  css-tag: #3e54a3,
+  js-tag: #e13784,
+  api-tag: #85c20a,
+);
+$difficulty-tag-colors: (
+  newbie: #14c2c8,
+  junior: #aad742,
+  intermediate: #f1b604,
+  advanced: #f48925,
+  guru: #eb5252,
 );
