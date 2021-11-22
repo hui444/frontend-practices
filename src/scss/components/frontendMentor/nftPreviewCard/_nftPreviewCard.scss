@@ -94,10 +94,12 @@
 .nft-eth-span {
   color: $nft-cyan;
   font-weight: 400;
+  flex-shrink: 0;
 }
 
 .nft-days-span {
   color: $nft-soft-blue;
+  flex-shrink: 0;
 }
 
 .nft-creator-container {

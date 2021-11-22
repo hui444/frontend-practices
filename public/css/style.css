@@ -419,10 +419,12 @@ code {
 .nft-eth-span {
   color: #00fff7;
   font-weight: 400;
+  flex-shrink: 0;
 }
 
 .nft-days-span {
   color: #8bacda;
+  flex-shrink: 0;
 }
 
 .nft-creator-container {
