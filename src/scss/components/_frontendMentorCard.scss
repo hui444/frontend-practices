@@ -1,22 +1,23 @@
 @use '../abstracts' as *;
 
-.fm-card-container {
+.fm-card__container {
   display: flex;
   flex-direction: column;
   width: 350px;
   height: 400px;
   background-color: #fff;
-  border: 1px solid $fm-card-border;
+  border: 1px solid $fm-card__border;
   border-radius: 8px;
 }
 
-.fm-card-image-container {
+.fm-card__image-container {
   flex: 1 1 60%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
   img {
     transition: transform 0.3s ease 0s;
     object-fit: cover;
@@ -24,13 +25,12 @@
 
   &:hover {
     img {
-      transition: transform 0.3s ease 0s;
       transform: scale(1.05);
     }
   }
 }
 
-.fm-card-content {
+.fm-card__content {
   flex: 1 1 40%;
   padding: 15px 20px 20px;
 
@@ -39,11 +39,13 @@
     font-size: 19px;
     margin-bottom: 10px;
     color: $fm-title-text;
+
     a {
       text-decoration: none;
       color: inherit;
     }
   }
+
   p {
     font-size: 12px;
     color: $fm-description-text;
@@ -51,17 +53,17 @@
   }
 }
 
-.fm-challenge-link {
+.fm-challenge__link {
   font-size: 13px;
-  color: $card-link-blue;
+  color: $card__link--blue;
   text-decoration: none;
   &:focus,
   &:hover {
-    color: $card-link-blue__active;
+    color: $card__link--blue__active;
   }
 }
 
-.fm-card-info-container {
+.fm-card__info-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,7 +71,7 @@
   margin: 0 0 10px 0;
 }
 
-.fm-card-language-tags {
+.fm-card__language-tags {
   font-size: clamp(12px, 0.85rem, 24px);
   margin: 0;
   padding: 0;
@@ -89,7 +91,7 @@
   }
 }
 
-.fm-card-difficulty-tag {
+.fm-card__difficulty-tag {
   font-size: clamp(12px, 0.85rem, 24px);
   display: flex;
   border-radius: 4px;

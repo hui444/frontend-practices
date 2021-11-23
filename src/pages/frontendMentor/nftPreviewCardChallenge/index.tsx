@@ -2,7 +2,6 @@ import NftPreviewCard from '../../../components/frontendMentor/nftPreviewCard/nf
 import equilibriumImg from '../../../assets/frontendMentorInfo/nft-preview-card-component-main/images/image-equilibrium.jpg';
 import avatarImg from '../../../assets/frontendMentorInfo/nft-preview-card-component-main/images/image-avatar.png';
 
-import '../../../scss/pages/frontendMentor/_nftPreviewCard.scss';
 const NftPreviewCardChallenge = () => {
   return (
     <div className="nft-page">

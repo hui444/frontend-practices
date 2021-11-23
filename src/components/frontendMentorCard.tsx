@@ -26,7 +26,7 @@ const FrontendMentorCard = (card: Card) => {
     }
 
     return (
-      <div className={`fm-card-difficulty-tag fm-${difficultyTextArr[index]}`}>
+      <div className={`fm-card__difficulty-tag fm-${difficultyTextArr[index]}`}>
         <span className="fm-difficulty-num">{difficultyNumArr[index]}</span>
         <span className="fm-difficulty-text">{difficultyTextArr[index]}</span>
       </div>
@@ -34,16 +34,16 @@ const FrontendMentorCard = (card: Card) => {
   };
 
   return (
-    <div className="fm-card-container">
-      <div className="fm-card-image-container" onClick={() => card.to && navigate(card.to)}>
+    <div className="fm-card__container">
+      <div className="fm-card__image-container" onClick={() => card.to && navigate(card.to)}>
         <img src={card.image} alt={`${card.title} preview`} />
       </div>
-      <div className="fm-card-content">
+      <div className="fm-card__content">
         <h3>
           <a href={card.to ?? '#'}>{card.title}</a>
         </h3>
-        <div className="fm-card-info-container">
-          <ul className="fm-card-language-tags">
+        <div className="fm-card__info-container">
+          <ul className="fm-card__language-tags">
             {card.withHTMLCSS && (
               <>
                 <li className="fm-html-tag">HTML</li>
@@ -56,7 +56,7 @@ const FrontendMentorCard = (card: Card) => {
           <DifficultyTag />
         </div>
         <p>{card.description}</p>
-        <a className="fm-challenge-link" href={card.challengeLink} target="_blank" rel="noreferrer">
+        <a className="fm-challenge__link" href={card.challengeLink} target="_blank" rel="noreferrer">
           Challenge Link
         </a>
       </div>

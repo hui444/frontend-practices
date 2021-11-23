@@ -1,8 +1,8 @@
+import { PATHS } from '../common/paths';
+
 import Card from '../components/card';
 import FrontendMentorCard from '../components/frontendMentorCard';
 import previewImage from '../assets/frontendMentorInfo/nft-preview-card-component-main/design/desktop-preview.jpg';
-import '../scss/pages/_home.scss';
-import { PATHS } from '../common/paths';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
         description={
           <>
             practices from{' '}
-            <a className="card-link" href="https://frontendmentor.io" target="_blank" rel="noreferrer">
+            <a href="https://frontendmentor.io" target="_blank" rel="noreferrer">
               frontendmentor.io
             </a>
           </>

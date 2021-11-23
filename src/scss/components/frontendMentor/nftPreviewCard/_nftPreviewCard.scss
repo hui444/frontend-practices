@@ -1,16 +1,16 @@
 @use '../../../abstracts' as *;
 
-.nft-card-container {
+.nft-card__container {
   border-radius: 13px;
-  background-color: $nft-card-background;
+  background-color: $nft-card__background;
   font-family: 'Outfit';
-  color: $nft-white;
+  color: $nft--white;
   width: 350px;
   height: fit-content;
   padding: 20px;
 }
 
-.nft-content-container {
+.nft-content__container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -27,14 +27,14 @@
     transition: color 200ms ease-out;
 
     &:hover {
-      color: $nft-cyan;
+      color: $nft--cyan;
     }
   }
 
   p {
     font-weight: 300;
     font-size: $nft-body;
-    color: $nft-soft-blue;
+    color: $nft--soft-blue;
   }
 
   hr {
@@ -45,7 +45,7 @@
   }
 }
 
-.nft-preview-img-container {
+.nft-preview-img__container {
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -59,7 +59,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba($nft-cyan, 0.5);
+    background-color: rgba($nft--cyan, 0.5);
     background-image: url('../../../../assets/frontendMentorInfo/nft-preview-card-component-main/images/icon-view.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -75,7 +75,7 @@
   }
 }
 
-.nft-info-container {
+.nft-info__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -91,26 +91,26 @@
   }
 }
 
-.nft-eth-span {
-  color: $nft-cyan;
+.nft-eth__span {
+  color: $nft--cyan;
   font-weight: 400;
   flex-shrink: 0;
 }
 
-.nft-days-span {
-  color: $nft-soft-blue;
+.nft-days__span {
+  color: $nft--soft-blue;
   flex-shrink: 0;
 }
 
-.nft-creator-container {
+.nft-creator__container {
   display: flex;
   flex-direction: row;
-  color: $nft-soft-blue;
+  color: $nft--soft-blue;
 
   img {
     width: 30px;
     margin-right: 10px;
-    border: 1px solid $nft-white;
+    border: 1px solid $nft--white;
     border-radius: 50%;
   }
 
@@ -118,7 +118,7 @@
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 500;
-    color: $nft-white;
+    color: $nft--white;
     cursor: pointer;
     -webkit-transition: opacity 200ms ease;
     -moz-transition: opacity 200ms ease;
@@ -127,7 +127,7 @@
     transition: color 200ms ease-out;
 
     &:hover {
-      color: $nft-cyan;
+      color: $nft--cyan;
     }
   }
 }

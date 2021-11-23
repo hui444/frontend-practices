@@ -1,10 +1,10 @@
 @use '../abstracts' as *;
 
-.card-container {
-  border-top: 3px solid $card-blue;
+.card__container {
+  border-top: 3px solid $card--blue;
   width: 300px;
   height: 200px;
-  background: $card-background;
+  background: $card__background;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -26,14 +26,24 @@
     text-transform: capitalize;
     text-align: right;
   }
+
   p {
     font-size: 12px;
     line-height: 24px;
   }
+
+  a {
+    color: $card__link--blue;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      color: $card__link--blue--active;
+    }
+  }
 }
 
-.card-button {
-  background-color: $card-pink;
+.card__button {
+  background-color: $card--pink;
   padding: 3px 20px;
   border: none;
   border-radius: 30px;
@@ -42,15 +52,6 @@
 
   &:focus,
   &:hover {
-    background-color: $card-pink__active;
-  }
-}
-
-.card-link {
-  color: $card-link-blue;
-  text-decoration: none;
-  &:focus,
-  &:hover {
-    color: $card-link-blue__active;
+    background-color: $card--pink--active;
   }
 }

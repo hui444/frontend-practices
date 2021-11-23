@@ -1,13 +1,13 @@
 //website card
-$card-blue: #67bece;
-$card-pink: #f9c7c5;
-$card-background: #fafafa;
-$card-pink__active: #fab0ae;
-$card-link-blue: #29b2cb;
-$card-link-blue__active: $card-blue;
+$card--blue: #67bece;
+$card--pink: #f9c7c5;
+$card__background: #fafafa;
+$card--pink__active: #fab0ae;
+$card__link--blue: #29b2cb;
+$card__link--blue__active: $card--blue;
 
 //frontendMentor card
-$fm-card-border: #dce5e6;
+$fm-card__border: #dce5e6;
 $fm-title-text: #1c2022;
 $fm-description-text: #737373;
 $tag-colors: (
@@ -25,9 +25,9 @@ $difficulty-tag-colors: (
 );
 
 //nft preview card
-$nft-soft-blue: hsl(215, 51%, 70%);
-$nft-cyan: hsl(178, 100%, 50%);
+$nft--soft-blue: hsl(215, 51%, 70%);
+$nft--cyan: hsl(178, 100%, 50%);
 $nft-main-background: hsl(217, 54%, 11%); //very dark blue
-$nft-card-background: hsl(216, 50%, 16%); //very dark blue
+$nft-card__background: hsl(216, 50%, 16%); //very dark blue
 $nft-line: hsl(215, 32%, 27%); //very dark blue
-$nft-white: hsl(0, 0%, 100%);
+$nft--white: hsl(0, 0%, 100%);
