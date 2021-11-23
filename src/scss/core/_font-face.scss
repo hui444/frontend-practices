@@ -4,3 +4,22 @@
   font-display: swap;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../assets/fonts/Outfit/static/Outfit-Light.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../assets/fonts/Outfit/static/Outfit-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('../../assets/fonts/Outfit/static/Outfit-Medium.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 500;
+}

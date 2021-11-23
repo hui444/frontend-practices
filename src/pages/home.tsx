@@ -1,7 +1,9 @@
+import { PATHS } from '../common/paths';
+
 import Card from '../components/card';
 import FrontendMentorCard from '../components/frontendMentorCard';
-import '../scss/pages/_home.scss';
 import previewImage from '../assets/frontendMentorInfo/nft-preview-card-component-main/design/desktop-preview.jpg';
+
 const Home = () => {
   return (
     <div>
@@ -10,7 +12,7 @@ const Home = () => {
         description={
           <>
             practices from{' '}
-            <a className="card-link" href="https://frontendmentor.io" target="_blank" rel="noreferrer">
+            <a href="https://frontendmentor.io" target="_blank" rel="noreferrer">
               frontendmentor.io
             </a>
           </>
@@ -24,6 +26,7 @@ const Home = () => {
         difficulty={1}
         withHTMLCSS
         challengeLink="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U"
+        to={PATHS.NFT_PREVIEW_CARD_CHALLENGE}
       />
     </div>
   );

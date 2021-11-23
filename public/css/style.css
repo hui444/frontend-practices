@@ -4,6 +4,24 @@
   font-display: swap;
   font-weight: normal;
 }
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit/static/Outfit-Light.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/fonts/Outfit/static/Outfit-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -91,7 +109,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.card-container {
+.card__container {
   border-top: 3px solid #67bece;
   width: 300px;
   height: 200px;
@@ -102,26 +120,33 @@ code {
   justify-content: space-around;
   padding: 15px 25px;
 }
-.card-container div {
+.card__container div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 8px;
   width: 20ch;
 }
-.card-container h3 {
+.card__container h3 {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
   text-transform: capitalize;
   text-align: right;
 }
-.card-container p {
+.card__container p {
   font-size: 12px;
   line-height: 24px;
 }
+.card__container a {
+  color: #29b2cb;
+  text-decoration: none;
+}
+.card__container a:focus, .card__container a:hover {
+  color: #67bece;
+}
 
-.card-button {
+.card__button {
   background-color: #f9c7c5;
   padding: 3px 20px;
   border: none;
@@ -129,19 +154,11 @@ code {
   font-size: 13px;
   line-height: 24px;
 }
-.card-button:focus, .card-button:hover {
+.card__button:focus, .card__button:hover {
   background-color: #fab0ae;
 }
 
-.card-link {
-  color: #29b2cb;
-  text-decoration: none;
-}
-.card-link:focus, .card-link:hover {
-  color: #67bece;
-}
-
-.fm-card-container {
+.fm-card__container {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -151,7 +168,7 @@ code {
   border-radius: 8px;
 }
 
-.fm-card-image-container {
+.fm-card__image-container {
   flex: 1 1 60%;
   overflow: hidden;
   display: flex;
@@ -159,45 +176,44 @@ code {
   align-items: center;
   cursor: pointer;
 }
-.fm-card-image-container img {
+.fm-card__image-container img {
   transition: transform 0.3s ease 0s;
   object-fit: cover;
 }
-.fm-card-image-container:hover img {
-  transition: transform 0.3s ease 0s;
+.fm-card__image-container:hover img {
   transform: scale(1.05);
 }
 
-.fm-card-content {
+.fm-card__content {
   flex: 1 1 40%;
   padding: 15px 20px 20px;
 }
-.fm-card-content h3 {
+.fm-card__content h3 {
   font-weight: normal;
   font-size: 19px;
   margin-bottom: 10px;
   color: #1c2022;
 }
-.fm-card-content h3 a {
+.fm-card__content h3 a {
   text-decoration: none;
   color: inherit;
 }
-.fm-card-content p {
+.fm-card__content p {
   font-size: 12px;
   color: #737373;
   margin-bottom: 5px;
 }
 
-.fm-challenge-link {
+.fm-challenge__link {
   font-size: 13px;
   color: #29b2cb;
   text-decoration: none;
 }
-.fm-challenge-link:focus, .fm-challenge-link:hover {
+.fm-challenge__link:focus, .fm-challenge__link:hover {
   color: #67bece;
 }
 
-.fm-card-info-container {
+.fm-card__info-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -205,17 +221,17 @@ code {
   margin: 0 0 10px 0;
 }
 
-.fm-card-language-tags {
+.fm-card__language-tags {
   font-size: clamp(12px, 0.85rem, 24px);
   margin: 0;
   padding: 0;
   font-weight: 600;
 }
-.fm-card-language-tags li {
+.fm-card__language-tags li {
   list-style-type: none;
   display: inline-block;
 }
-.fm-card-language-tags li + li {
+.fm-card__language-tags li + li {
   margin-left: 10px;
 }
 
@@ -235,7 +251,7 @@ code {
   color: #85c20a;
 }
 
-.fm-card-difficulty-tag {
+.fm-card__difficulty-tag {
   font-size: clamp(12px, 0.85rem, 24px);
   display: flex;
   border-radius: 4px;
@@ -312,6 +328,137 @@ code {
 .fm-guru .fm-difficulty-text {
   color: #eb5252;
   padding: 2px 10px;
+}
+
+.nft-card__container {
+  border-radius: 13px;
+  background-color: #14253d;
+  font-family: "Outfit";
+  color: white;
+  width: 350px;
+  height: fit-content;
+  padding: 20px;
+}
+
+.nft-content__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.nft-content__container h3 {
+  font-weight: 500;
+  cursor: pointer;
+  width: max-content;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: color 200ms ease-out;
+}
+.nft-content__container h3:hover {
+  color: #00fff7;
+}
+.nft-content__container p {
+  font-weight: 300;
+  font-size: 18px;
+  color: #8bacda;
+}
+.nft-content__container hr {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #2f415b;
+}
+
+.nft-preview-img__container {
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.nft-preview-img__container::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 255, 247, 0.5);
+  background-image: url("../../../../assets/frontendMentorInfo/nft-preview-card-component-main/images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease-out;
+}
+.nft-preview-img__container:hover::after {
+  opacity: 1;
+}
+
+.nft-info__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nft-info__container div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.nft-info__container img {
+  object-fit: contain;
+}
+
+.nft-eth__span {
+  color: #00fff7;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.nft-days__span {
+  color: #8bacda;
+  flex-shrink: 0;
+}
+
+.nft-creator__container {
+  display: flex;
+  flex-direction: row;
+  color: #8bacda;
+}
+.nft-creator__container img {
+  width: 30px;
+  margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.nft-creator__container em {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: color 200ms ease-out;
+}
+.nft-creator__container em:hover {
+  color: #00fff7;
+}
+
+.nft__page {
+  background-color: #0d192b;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
