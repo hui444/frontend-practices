@@ -4,7 +4,7 @@ import avatarImg from '../../../assets/frontendMentorInfo/nft-preview-card-compo
 
 const NftPreviewCardChallenge = () => {
   return (
-    <div className="nft__page">
+    <div className="nft-challenge__page">
       <NftPreviewCard
         previewImage={equilibriumImg}
         title="Equilibrium #3429"

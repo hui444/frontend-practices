@@ -4,15 +4,23 @@ import { Route, Routes as Switch } from 'react-router-dom';
 import { PATHS } from '../common/paths';
 
 const Home = React.lazy(() => import(/* webpackChunckName: "Home" */ '../pages/home'));
+const FrontendMentorHome = React.lazy(
+  () => import(/* webpackChunckName: "FrontendMentorHome" */ '../pages/frontendMentor'),
+);
 const NftPreviewCardChallenge = React.lazy(
   () => import(/* webpackChunckName: "NftPreviewCardChallenge" */ '../pages/frontendMentor/nftPreviewCardChallenge'),
+);
+const OrderSummaryChallenge = React.lazy(
+  () => import(/* webpackChunckName: "OrderSummaryChallenge" */ '../pages/frontendMentor/orderSummaryChallenge'),
 );
 
 const Routes = () => {
   return (
     <Switch>
       <Route path={PATHS.HOME} element={<Home />} />
+      <Route path={PATHS.FRONTEND_MENTOR_HOME} element={<FrontendMentorHome />} />
       <Route path={PATHS.NFT_PREVIEW_CARD_CHALLENGE} element={<NftPreviewCardChallenge />} />
+      <Route path={PATHS.ORDER_SUMMARY_CHALLENGE} element={<OrderSummaryChallenge />} />
       <Route path="*" element={<>not found</>} />
     </Switch>
   );
