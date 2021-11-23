@@ -11,4 +11,4 @@ frontend mentor challenge:
       ]
 
 workflow:
-  - any: ['.github/workflows']
+  - any: ['.github/workflows/**']
