@@ -1,14 +1,16 @@
 frontend-mentor-setup:
-  - any: ['src/assets/frontendMentorInfo/*']
+  - 'src/assets/frontendMentorInfo/*'
+  - 'src/assets/frontendMentorInfo/**/*'
 
 frontend-mentor-challenge:
-  - any:
-      [
-        'src/components/frontendMentor/*',
-        'src/pages/frontendMentor/*',
-        'src/scss/components/frontendMentor/*',
-        'src/scss/pages/frontendMentor/*',
-      ]
+  - 'src/components/frontendMentor/**/*'
+  - 'src/components/frontendMentor/*'
+  - 'src/pages/frontendMentor/**/*'
+  - 'src/pages/frontendMentor/*'
+  - 'src/scss/components/frontendMentor/*'
+  - 'src/scss/components/frontendMentor/**/*'
+  - 'src/scss/pages/frontendMentor/*'
 
 workflow:
-  - any: ['.github/workflows/**', '.github/labeler.yml']
+  - '.github/workflows/*'
+  - '.github/labeler.yml'
