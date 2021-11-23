@@ -1,7 +1,7 @@
-frontend mentor setup:
+frontend-mentor-setup:
   - any: ['src/assets/frontendMentorInfo/*']
 
-frontend mentor challenge:
+frontend-mentor-challenge:
   - any:
       [
         'src/components/frontendMentor/*',
