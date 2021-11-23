@@ -1,0 +1,14 @@
+frontend mentor setup:
+  - any: ['src/assets/frontendMentorInfo/*']
+
+frontend mentor challenge:
+  - any:
+      [
+        'src/components/frontendMentor/*',
+        'src/pages/frontendMentor/*',
+        'src/scss/components/frontendMentor/*',
+        'src/scss/pages/frontendMentor/*',
+      ]
+
+workflow:
+  - any: ['.github/workflows/**', '.github/labeler.yml']
