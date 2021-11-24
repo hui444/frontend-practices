@@ -13,7 +13,7 @@ const Card = (card: Card) => {
         <p>{card.description}</p>
       </div>
       {card.buttonText && (
-        <button className="card__button" onClick={() => card.onClick}>
+        <button className="card__button" onClick={card.onClick}>
           {card.buttonText}
         </button>
       )}

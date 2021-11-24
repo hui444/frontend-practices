@@ -1,6 +1,6 @@
-@use '../../abstracts' as *;
+@use '../../../abstracts' as *;
 
-.nft__page {
+.nft-challenge__page {
   background-color: $nft-main-background;
   height: 100%;
   min-height: 100vh;

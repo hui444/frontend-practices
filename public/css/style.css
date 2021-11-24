@@ -22,6 +22,24 @@
   font-display: swap;
   font-weight: 500;
 }
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Black.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 900;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -166,10 +184,11 @@ code {
   background-color: #fff;
   border: 1px solid #dce5e6;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .fm-card__image-container {
-  flex: 1 1 60%;
+  flex: 1 1 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -185,7 +204,7 @@ code {
 }
 
 .fm-card__content {
-  flex: 1 1 40%;
+  flex: 1 1 50%;
   padding: 15px 20px 20px;
 }
 .fm-card__content h3 {
@@ -452,13 +471,143 @@ code {
   color: #00fff7;
 }
 
-.nft__page {
+.os-card__container {
+  display: flex;
+  flex-direction: column;
+  width: clamp(19rem, 90vw, 25rem);
+  font-family: "Red Hat Display";
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.os-illustration__container {
+  width: 100%;
+  height: fit-content;
+}
+
+.os-content__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 0 20px 0;
+  width: max(80%, 18rem);
+  margin: auto;
+  gap: 1.2rem;
+}
+.os-content__container h3 {
+  font-weight: 900;
+  color: #1f2f56;
+}
+.os-content__container p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #7280a7;
+}
+
+.os-plan-details__container {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "icon plan button" "icon cost button";
+  background-color: #f5f7ff;
+  border-radius: 15px;
+  padding: 15px;
+  grid-gap: 0 20px;
+}
+
+.music-icon {
+  grid-area: icon;
+  place-self: center;
+}
+
+.plan-text {
+  grid-area: plan;
+  text-align: left;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+.cost-text {
+  grid-area: cost;
+  text-align: left;
+  color: #7280a7;
+}
+
+.change-button {
+  grid-area: button;
+  place-self: center;
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+  color: #3829e0;
+}
+.change-button:hover {
+  color: #6054e6;
+}
+
+.os-buttons__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.os-button {
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+}
+.os-button.primary {
+  background-color: #3829e0;
+  color: white;
+  box-shadow: 0 5px 15px 0px rgba(56, 41, 224, 0.5);
+}
+.os-button.primary:hover {
+  opacity: 0.8;
+}
+.os-button.secondary {
+  background-color: transparent;
+  color: #7280a7;
+}
+.os-button.secondary:hover {
+  color: #1f2f56;
+}
+
+.fm-cards__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.5rem 1rem;
+  gap: 1em;
+}
+
+.nft-challenge__page {
   background-color: #0d192b;
   height: 100%;
   min-height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
+}
+
+.os-challenge__page {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #e0e8ff;
+  background-image: url("../../../../assets/frontendMentorInfo/order-summary-component-main/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: background-image 1s ease;
+}
+@media only screen and (max-width: 375px) {
+  .os-challenge__page {
+    background-image: url("../../../../assets/frontendMentorInfo/order-summary-component-main/images/pattern-background-mobile.svg");
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
