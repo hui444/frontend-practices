@@ -40,6 +40,24 @@
   font-display: swap;
   font-weight: 900;
 }
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter/static/Inter-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../../assets/fonts/Lexend_Deca/static/LexendDeca-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -575,6 +593,106 @@ code {
   color: #1f2f56;
 }
 
+.sp-card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "content image";
+  background-color: #1b1938;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 60rem;
+  width: 90vw;
+}
+@media only screen and (max-width: 840px) {
+  .sp-card__container {
+    height: fit-content;
+    width: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    grid-template-areas: "image" "content";
+  }
+}
+
+.sp-card-content__container {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 3rem;
+}
+@media only screen and (max-width: 840px) {
+  .sp-card-content__container {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.sp-card-content__introduction-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 1.2;
+}
+.sp-card-content__introduction-container h3 {
+  color: white;
+  font-size: 32px;
+}
+.sp-card-content__introduction-container em {
+  font-style: normal;
+  color: #aa5cdb;
+}
+.sp-card-content__introduction-container p {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: normal;
+  font-size: 15px;
+  margin: 2rem 0;
+  line-height: 1.7;
+}
+
+.sp-card-content__stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sp-card-content__stats-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.sp-stats--value {
+  color: white;
+  font-size: 28px;
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+.sp-stats--title {
+  font-family: "Lexend Deca";
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+}
+
+.sp-card-image {
+  grid-area: image;
+  height: inherit;
+  background-image: url("../../../../assets/frontendMentorInfo/stats-preview-card-component-main/images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(170, 92, 219, 0.8);
+  background-blend-mode: multiply;
+}
+@media only screen and (max-width: 840px) {
+  .sp-card-image {
+    width: 100%;
+  }
+}
+
 .fm-cards__container {
   display: flex;
   flex-direction: row;
@@ -608,6 +726,15 @@ code {
   .os-challenge__page {
     background-image: url("../../../../assets/frontendMentorInfo/order-summary-component-main/images/pattern-background-mobile.svg");
   }
+}
+
+.sp-challenge__page {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #090b1a;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
