@@ -1,3 +1,10 @@
+// 1. Poppins (normal)
+// 2. Outfit (300, normal, 500)
+// 3. Red Hat Display (500, 700, 900)
+// 4. Inter (normal, 700)
+// 5. Lexend Deca (normal)
+
+//Poppins (normal)
 @font-face {
   font-family: 'Poppins';
   src: url('../../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
@@ -5,6 +12,7 @@
   font-weight: normal;
 }
 
+//Outfit (300, normal, 500)
 @font-face {
   font-family: 'Outfit';
   src: url('../../assets/fonts/Outfit/static/Outfit-Light.ttf') format('truetype');
@@ -24,6 +32,7 @@
   font-weight: 500;
 }
 
+//Red Hat Display (500, 700, 900)
 @font-face {
   font-family: 'Red Hat Display';
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Medium.ttf') format('truetype');
@@ -41,4 +50,26 @@
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Black.ttf') format('truetype');
   font-display: swap;
   font-weight: 900;
+}
+
+//Inter (normal, 700)
+@font-face {
+  font-family: 'Inter';
+  src: url('../../assets/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../../assets/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 700;
+}
+
+//Lexend Deca (normal)
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../../assets/fonts/Lexend_Deca/static/LexendDeca-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
 }

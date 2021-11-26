@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-interface Card {
+export interface FMCard {
   image?: string;
   title: string;
   description: string;
@@ -12,7 +12,7 @@ interface Card {
   to?: string;
 }
 
-const FrontendMentorCard = (card: Card) => {
+const FrontendMentorCard = (card: FMCard) => {
   const navigate = useNavigate();
 
   const DifficultyTag = () => {
