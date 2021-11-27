@@ -818,6 +818,84 @@ code {
   background-color: #004241;
 }
 
+.pc-card__container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Kumbh Sans";
+  position: relative;
+  max-width: 28rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.pc-card__banner {
+  height: 8rem;
+  object-fit: cover;
+}
+
+.pc-card__avatar {
+  border-radius: 50%;
+  width: 6rem;
+  object-fit: contain;
+  position: absolute;
+  border: 3px solid white;
+  margin-top: 5rem;
+  margin-left: calc(50% - 3rem);
+}
+
+.pc-card__content-container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 1.5rem 0;
+}
+.pc-card__content-container hr {
+  border-top: 1px solid #969696;
+  width: 100%;
+  margin: 1.2rem 0;
+}
+
+.pc-card__profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pc-card__profile-container h3 {
+  color: #2d3248;
+  font-weight: 700;
+  font-size: 18px;
+  align-items: center;
+}
+.pc-card__profile-container span {
+  color: #6a6f81;
+  font-weight: normal;
+  margin-left: 5px;
+}
+.pc-card__profile-container p {
+  color: #6a6f81;
+}
+
+.pc-card__stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.pc-card__stats-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pc-card__value {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pc-card__title {
+  color: #6a6f81;
+}
+
 .fm-cards__container {
   display: flex;
   flex-direction: row;
@@ -882,6 +960,49 @@ code {
 @media only screen and (max-width: 840px) {
   .cp-challenge__content-container {
     flex-direction: column;
+  }
+}
+
+.pc-challenge__page {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #19a2ae;
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-background-circle--top {
+  position: absolute;
+  top: -550px;
+  left: -200px;
+  width: 1000px;
+  height: 1000px;
+}
+@media only screen and (max-width: 880px) {
+  .pc-background-circle--top {
+    top: -350px;
+    left: -350px;
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.pc-background-circle--bottom {
+  position: absolute;
+  bottom: -650px;
+  right: -200px;
+  width: 1000px;
+  height: 1000px;
+}
+@media only screen and (max-width: 880px) {
+  .pc-background-circle--bottom {
+    bottom: -350px;
+    right: -350px;
+    width: 700px;
+    height: 700px;
   }
 }
 
