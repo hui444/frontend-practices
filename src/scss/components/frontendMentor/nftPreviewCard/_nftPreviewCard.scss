@@ -3,7 +3,7 @@
 .nft-card__container {
   border-radius: 13px;
   background-color: $nft-card__background;
-  font-family: 'Outfit';
+  font-family: $font--outfit;
   color: $nft--white;
   width: 350px;
   height: fit-content;
@@ -115,7 +115,7 @@
   }
 
   em {
-    font-family: 'Outfit';
+    font-family: $font--outfit;
     font-style: normal;
     font-weight: 500;
     color: $nft--white;

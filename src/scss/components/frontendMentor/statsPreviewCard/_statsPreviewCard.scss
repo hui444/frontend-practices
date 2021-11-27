@@ -40,7 +40,7 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
 .sp-card-content__introduction-container {
   display: flex;
   flex-direction: column;
-  font-family: 'Inter';
+  font-family: $font--inter;
   font-weight: 700;
   line-height: 1.2;
 
@@ -96,12 +96,12 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
 .sp-stats--value {
   color: $sp--white;
   font-size: 28px;
-  font-family: 'Inter';
+  font-family: $font--inter;
   font-weight: 700;
 }
 
 .sp-stats--title {
-  font-family: 'Lexend Deca';
+  font-family: $font--lexend-deca;
   text-transform: uppercase;
   color: $sp--white--60;
   font-size: $sp-body;
