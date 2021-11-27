@@ -5,8 +5,9 @@
 // 4. Inter (normal, 700)
 // 5. Lexend Deca (normal)
 // 6. Big Shoulders Display (700)
+// 7. Kumbh Sans (normal, 700)
 
-//Poppins (normal)
+// Poppins (normal)
 @font-face {
   font-family: $font--poppins;
   src: url('../../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
@@ -14,7 +15,7 @@
   font-weight: normal;
 }
 
-//Outfit (300, normal, 500)
+// Outfit (300, normal, 500)
 @font-face {
   font-family: $font--outfit;
   src: url('../../assets/fonts/Outfit/static/Outfit-Light.ttf') format('truetype');
@@ -34,7 +35,7 @@
   font-weight: 500;
 }
 
-//Red Hat Display (500, 700, 900)
+// Red Hat Display (500, 700, 900)
 @font-face {
   font-family: $font--red-hat-display;
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Medium.ttf') format('truetype');
@@ -54,7 +55,7 @@
   font-weight: 900;
 }
 
-//Inter (normal, 700)
+// Inter (normal, 700)
 @font-face {
   font-family: $font--inter;
   src: url('../../assets/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
@@ -68,7 +69,7 @@
   font-weight: 700;
 }
 
-//Lexend Deca (normal)
+// Lexend Deca (normal)
 @font-face {
   font-family: $font--lexend-deca;
   src: url('../../assets/fonts/Lexend_Deca/static/LexendDeca-Regular.ttf') format('truetype');
@@ -76,10 +77,24 @@
   font-weight: normal;
 }
 
-//Big Shoulders Display (700)
+// Big Shoulders Display (700)
 @font-face {
   font-family: $font--big-shoulders-display;
   src: url('../../assets/fonts/Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 700;
+}
+
+// Kumbh Sans (normal, 700)
+@font-face {
+  font-family: $font--kumbh-sans;
+  src: url('../../assets/fonts/Kumbh_Sans/static/KumbhSans-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: $font--kumbh-sans;
+  src: url('../../assets/fonts/Kumbh_Sans/static/KumbhSans-Bold.ttf') format('truetype');
   font-display: swap;
   font-weight: 700;
 }
