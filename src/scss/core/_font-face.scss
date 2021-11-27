@@ -1,12 +1,14 @@
+@use '../abstracts' as *;
 // 1. Poppins (normal)
 // 2. Outfit (300, normal, 500)
 // 3. Red Hat Display (500, 700, 900)
 // 4. Inter (normal, 700)
 // 5. Lexend Deca (normal)
+// 6. Big Shoulders Display (700)
 
 //Poppins (normal)
 @font-face {
-  font-family: 'Poppins';
+  font-family: $font--poppins;
   src: url('../../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   font-display: swap;
   font-weight: normal;
@@ -14,19 +16,19 @@
 
 //Outfit (300, normal, 500)
 @font-face {
-  font-family: 'Outfit';
+  font-family: $font--outfit;
   src: url('../../assets/fonts/Outfit/static/Outfit-Light.ttf') format('truetype');
   font-display: swap;
   font-weight: 300;
 }
 @font-face {
-  font-family: 'Outfit';
+  font-family: $font--outfit;
   src: url('../../assets/fonts/Outfit/static/Outfit-Regular.ttf') format('truetype');
   font-display: swap;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Outfit';
+  font-family: $font--outfit;
   src: url('../../assets/fonts/Outfit/static/Outfit-Medium.ttf') format('truetype');
   font-display: swap;
   font-weight: 500;
@@ -34,19 +36,19 @@
 
 //Red Hat Display (500, 700, 900)
 @font-face {
-  font-family: 'Red Hat Display';
+  font-family: $font--red-hat-display;
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Medium.ttf') format('truetype');
   font-display: swap;
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Red Hat Display';
+  font-family: $font--red-hat-display;
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Bold.ttf') format('truetype');
   font-display: swap;
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Red Hat Display';
+  font-family: $font--red-hat-display;
   src: url('../../assets/fonts/Red_Hat_Display/static/RedHatDisplay-Black.ttf') format('truetype');
   font-display: swap;
   font-weight: 900;
@@ -54,13 +56,13 @@
 
 //Inter (normal, 700)
 @font-face {
-  font-family: 'Inter';
+  font-family: $font--inter;
   src: url('../../assets/fonts/Inter/static/Inter-Regular.ttf') format('truetype');
   font-display: swap;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: $font--inter;
   src: url('../../assets/fonts/Inter/static/Inter-Bold.ttf') format('truetype');
   font-display: swap;
   font-weight: 700;
@@ -68,8 +70,16 @@
 
 //Lexend Deca (normal)
 @font-face {
-  font-family: 'Lexend Deca';
+  font-family: $font--lexend-deca;
   src: url('../../assets/fonts/Lexend_Deca/static/LexendDeca-Regular.ttf') format('truetype');
   font-display: swap;
   font-weight: normal;
+}
+
+//Big Shoulders Display (700)
+@font-face {
+  font-family: $font--big-shoulders-display;
+  src: url('../../assets/fonts/Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 700;
 }

@@ -1,0 +1,88 @@
+@use '../../../abstracts' as *;
+
+.cp-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 20rem;
+  padding: 3rem 3.5rem;
+  font-family: $font--lexend-deca;
+  @include mq($cp-mobile-breakpoint) {
+    max-width: 28rem;
+  }
+}
+
+.cp-card__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+
+  img {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  h3 {
+    font-family: $font--big-shoulders-display;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $cp--very-light-gray;
+  }
+
+  p {
+    font-size: $cp-body;
+    color: $cp--white---75;
+  }
+}
+
+.cp-card__button {
+  background-color: $cp--very-light-gray;
+  border: 2px solid $cp--very-light-gray;
+  width: fit-content;
+  padding: 8px 20px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: $cp-body;
+}
+
+.bright-orange {
+  background-color: $cp--bright-orange;
+
+  .cp-card__button {
+    color: $cp--bright-orange;
+
+    &:hover {
+      color: $cp--very-light-gray;
+      background-color: $cp--bright-orange;
+    }
+  }
+}
+
+.dark-cyan {
+  background-color: $cp--dark-cyan;
+  .cp-card__button {
+    color: $cp--dark-cyan;
+
+    &:hover {
+      color: $cp--very-light-gray;
+      background-color: $cp--dark-cyan;
+    }
+  }
+}
+
+.very-dark-cyan {
+  background-color: $cp--very-dark-cyan;
+
+  .cp-card__button {
+    color: $cp--very-dark-cyan;
+
+    &:hover {
+      color: $cp--very-light-gray;
+      background-color: $cp--very-dark-cyan;
+    }
+  }
+}

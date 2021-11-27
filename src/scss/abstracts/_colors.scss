@@ -46,3 +46,10 @@ $sp-accent: hsl(277, 64%, 61%); //violet
 $sp--white: hsl(0, 0%, 100%); //(main heading, stats)
 $sp--white--75: hsla(0, 0%, 100%, 0.75); //slightly transparent white (main paragraph)
 $sp--white--60: hsla(0, 0%, 100%, 0.6); //slightly transparent white (stat headings)
+
+//3 col preview card
+$cp--bright-orange: hsl(31, 77%, 52%);
+$cp--dark-cyan: hsl(184, 100%, 22%);
+$cp--very-dark-cyan: hsl(179, 100%, 13%);
+$cp--white---75: hsla(0, 0%, 100%, 0.75); //paragraphs
+$cp--very-light-gray: hsl(0, 0%, 95%); //background, headings, buttons

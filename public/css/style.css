@@ -58,6 +58,12 @@
   font-display: swap;
   font-weight: normal;
 }
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("../../assets/fonts/Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -719,6 +725,87 @@ code {
   }
 }
 
+.cp-card__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 20rem;
+  padding: 3rem 3.5rem;
+  font-family: "Lexend Deca";
+}
+@media only screen and (max-width: 840px) {
+  .cp-card__container {
+    max-width: 28rem;
+  }
+}
+
+.cp-card__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.cp-card__content-container img {
+  height: 50px;
+  object-fit: contain;
+}
+.cp-card__content-container h3 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+.cp-card__content-container p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cp-card__button {
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  width: fit-content;
+  padding: 8px 20px;
+  border-radius: 30px;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.bright-orange {
+  background-color: #e38826;
+}
+.bright-orange .cp-card__button {
+  color: #e38826;
+}
+.bright-orange .cp-card__button:hover {
+  color: #f2f2f2;
+  background-color: #e38826;
+}
+
+.dark-cyan {
+  background-color: #006970;
+}
+.dark-cyan .cp-card__button {
+  color: #006970;
+}
+.dark-cyan .cp-card__button:hover {
+  color: #f2f2f2;
+  background-color: #006970;
+}
+
+.very-dark-cyan {
+  background-color: #004241;
+}
+.very-dark-cyan .cp-card__button {
+  color: #004241;
+}
+.very-dark-cyan .cp-card__button:hover {
+  color: #f2f2f2;
+  background-color: #004241;
+}
+
 .fm-cards__container {
   display: flex;
   flex-direction: row;
@@ -761,6 +848,29 @@ code {
   background-color: #090b1a;
   display: grid;
   place-items: center;
+}
+
+.cp-challenge__container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.cp-challenge__content-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 1rem;
+  width: fit-content;
+}
+@media only screen and (max-width: 840px) {
+  .cp-challenge__content-container {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
