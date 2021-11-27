@@ -4,6 +4,7 @@ import FrontendMentorCard, { FMCard } from '../../components/frontendMentorCard'
 import nft_previewImage from '../../assets/frontendMentorInfo/nft-preview-card-component-main/design/desktop-preview.jpg';
 import os_previewImage from '../../assets/frontendMentorInfo/order-summary-component-main/design/desktop-preview.jpg';
 import sp_previewImage from '../../assets/frontendMentorInfo/stats-preview-card-component-main/design/desktop-preview.jpg';
+import cp_previewImage from '../../assets/frontendMentorInfo/3-column-preview-card-component-main/design/desktop-preview.jpg';
 
 const challengeDataSet: FMCard[] = [
   {
@@ -35,7 +36,18 @@ const challengeDataSet: FMCard[] = [
     challengeLink: 'https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62',
     to: PATHS.STATS_PREVIEW_CARD_CHALLENGE,
   },
+  {
+    image: cp_previewImage,
+    title: '3-column preview card component challenge hub',
+    description:
+      "This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects.",
+    difficulty: 1,
+    withHTMLCSS: true,
+    challengeLink: 'https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-',
+    to: PATHS.COL_PREVIEW_CARD_CHALLENGE,
+  },
 ];
+
 const FrontendMentorHome = () => {
   return (
     <div className="fm-cards__container">
