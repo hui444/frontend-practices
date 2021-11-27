@@ -13,6 +13,10 @@ const NftPreviewCardChallenge = React.lazy(
 const OrderSummaryChallenge = React.lazy(
   () => import(/* webpackChunckName: "OrderSummaryChallenge" */ '../pages/frontendMentor/orderSummaryChallenge'),
 );
+const StatsPreviewCardChallenge = React.lazy(
+  () =>
+    import(/* webpackChunckName: "StatsPreviewCardChallenge" */ '../pages/frontendMentor/statsPreviewCardChallenge'),
+);
 
 const Routes = () => {
   return (
@@ -21,6 +25,7 @@ const Routes = () => {
       <Route path={PATHS.FRONTEND_MENTOR_HOME} element={<FrontendMentorHome />} />
       <Route path={PATHS.NFT_PREVIEW_CARD_CHALLENGE} element={<NftPreviewCardChallenge />} />
       <Route path={PATHS.ORDER_SUMMARY_CHALLENGE} element={<OrderSummaryChallenge />} />
+      <Route path={PATHS.STATS_PREVIEW_CARD_CHALLENGE} element={<StatsPreviewCardChallenge />} />
       <Route path="*" element={<>not found</>} />
     </Switch>
   );

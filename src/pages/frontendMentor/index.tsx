@@ -5,15 +5,6 @@ import nft_previewImage from '../../assets/frontendMentorInfo/nft-preview-card-c
 import os_previewImage from '../../assets/frontendMentorInfo/order-summary-component-main/design/desktop-preview.jpg';
 import sp_previewImage from '../../assets/frontendMentorInfo/stats-preview-card-component-main/design/desktop-preview.jpg';
 
-// image?: string;
-// title: string;
-// description: string;
-// difficulty: 1 | 2 | 3 | 4 | 5 | 'newbie' | 'junior' | 'intermediate' | 'advanced' | 'guru';
-// withHTMLCSS: boolean;
-// withJS?: boolean;
-// withAPI?: boolean;
-// challengeLink: string;
-// to?: string;
 const challengeDataSet: FMCard[] = [
   {
     image: nft_previewImage,
