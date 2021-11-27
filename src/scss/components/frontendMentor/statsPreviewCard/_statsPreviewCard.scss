@@ -4,7 +4,7 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
 
 .sp-card__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr minmax(min-content, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: 'content image';
   background-color: $sp-card-backgound;
@@ -19,6 +19,8 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
     grid-template-columns: 1fr;
     grid-template-rows: 1fr max-content;
     grid-template-areas: 'image' 'content';
+    max-width: 95vw;
+    margin: 1rem;
   }
 }
 
@@ -29,9 +31,9 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
   height: 100%;
   justify-content: space-between;
   padding: 3rem;
+
   @include mq($sp-mobile-breakpoint) {
-    width: 100%;
-    height: 50%;
+    padding: 2.5rem;
   }
 }
 
@@ -59,6 +61,15 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
     margin: 2rem 0;
     line-height: 1.7;
   }
+
+  @include mq($sp-mobile-breakpoint) {
+    text-align: center;
+
+    p {
+      margin-top: 1em;
+      margin-bottom: 2.5rem;
+    }
+  }
 }
 
 .sp-card-content__stats-container {
@@ -71,6 +82,14 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+  }
+
+  @include mq($sp-mobile-breakpoint) {
+    flex-direction: column;
+    gap: 20px;
+    div {
+      align-items: center;
+    }
   }
 }
 
@@ -90,14 +109,23 @@ $sp-header-image--mobile: '../../../../assets/frontendMentorInfo/stats-preview-c
 
 .sp-card-image {
   grid-area: image;
-  height: inherit;
+  background-color: rgba($sp-accent, 0.8);
   background-image: url($sp-header-image--desktop);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba($sp-accent, 0.8);
   background-blend-mode: multiply;
 
+  img {
+    object-fit: cover;
+    height: 100%;
+    visibility: hidden;
+  }
+
   @include mq($sp-mobile-breakpoint) {
-    width: 100%;
+    background-image: url($sp-header-image--mobile);
+
+    img {
+      width: 100%;
+    }
   }
 }
