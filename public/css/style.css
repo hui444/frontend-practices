@@ -983,8 +983,8 @@ code {
 }
 @media only screen and (max-width: 880px) {
   .pc-background-circle--top {
-    top: -350px;
-    left: -350px;
+    top: -250px;
+    left: -200px;
     width: 700px;
     height: 700px;
   }
@@ -1000,7 +1000,7 @@ code {
 @media only screen and (max-width: 880px) {
   .pc-background-circle--bottom {
     bottom: -350px;
-    right: -350px;
+    right: -200px;
     width: 700px;
     height: 700px;
   }
