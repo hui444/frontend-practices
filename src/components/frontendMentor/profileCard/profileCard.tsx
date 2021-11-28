@@ -1,32 +1,37 @@
 import banner from '../../../assets/frontendMentorInfo/profile-card-component-main/images/bg-pattern-card.svg';
-import avatar from '../../../assets/frontendMentorInfo/profile-card-component-main/images/image-victor.jpg';
 
-const ProfileCard = () => {
+export interface Stats {
+  value: string;
+  title: string;
+}
+interface ProfileCard {
+  avatarSrc: string;
+  name: string;
+  age: number;
+  location: string;
+  stats: Stats[];
+}
+
+const ProfileCard = (card: ProfileCard) => {
   return (
     <div className="pc-card__container">
       <img className="pc-card__banner" src={banner} alt="banner filled with bubbles" />
-      <img className="pc-card__avatar" src={avatar} alt="user avatar" />
+      <img className="pc-card__avatar" src={card.avatarSrc} alt="user avatar" />
       <div className="pc-card__content-container">
         <div className="pc-card__profile-container">
           <h3>
-            Victor Crest <span>26</span>
+            {card.name} <span>{card.age}</span>
           </h3>
-          <p>London</p>
+          <p>{card.location}</p>
         </div>
         <hr />
         <div className="pc-card__stats-container">
-          <div>
-            <span className="pc-card__value">80K</span>
-            <span className="pc-card__title">Followers</span>
-          </div>
-          <div>
-            <span className="pc-card__value">803K</span>
-            <span className="pc-card__title">Likes</span>
-          </div>
-          <div>
-            <span className="pc-card__value">1.4K</span>
-            <span className="pc-card__title">Photos</span>
-          </div>
+          {card.stats.map((stats: Stats, index: number) => (
+            <div key={index}>
+              <span className="pc-card__value">{stats.value}</span>
+              <span className="pc-card__title">{stats.title}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
