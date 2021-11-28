@@ -1,0 +1,42 @@
+@use '../../../abstracts' as *;
+
+.pc-challenge__page {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $pc--dark-cyan;
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-background-circle--top {
+  position: absolute;
+  top: -550px;
+  left: -200px;
+  width: 1000px;
+  height: 1000px;
+
+  @include mq($pc-mobile-breakpoint) {
+    top: -250px;
+    left: -200px;
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.pc-background-circle--bottom {
+  position: absolute;
+  bottom: -650px;
+  right: -200px;
+  width: 1000px;
+  height: 1000px;
+
+  @include mq($pc-mobile-breakpoint) {
+    bottom: -350px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+  }
+}

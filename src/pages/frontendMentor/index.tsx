@@ -5,6 +5,7 @@ import nft_previewImage from '../../assets/frontendMentorInfo/nft-preview-card-c
 import os_previewImage from '../../assets/frontendMentorInfo/order-summary-component-main/design/desktop-preview.jpg';
 import sp_previewImage from '../../assets/frontendMentorInfo/stats-preview-card-component-main/design/desktop-preview.jpg';
 import cp_previewImage from '../../assets/frontendMentorInfo/3-column-preview-card-component-main/design/desktop-preview.jpg';
+import pc_previewImage from '../../assets/frontendMentorInfo/profile-card-component-main/design/desktop-preview.jpg';
 
 const challengeDataSet: FMCard[] = [
   {
@@ -45,6 +46,16 @@ const challengeDataSet: FMCard[] = [
     withHTMLCSS: true,
     challengeLink: 'https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-',
     to: PATHS.COL_PREVIEW_CARD_CHALLENGE,
+  },
+  {
+    image: pc_previewImage,
+    title: 'Profile card component',
+    description:
+      "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
+    difficulty: 1,
+    withHTMLCSS: true,
+    challengeLink: 'https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ',
+    to: PATHS.PROFILE_CARD_CHALLENGE,
   },
 ];
 

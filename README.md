@@ -16,7 +16,8 @@ taken from [frontendmentor.io](https://www.frontendmentor.io/challenges)
    - pr [#7](https://github.com/hui444/frontend-practices/pull/7)
 1. ~~3-column preview card component - [link](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-)~~
    - pr [#9](https://github.com/hui444/frontend-practices/pull/9)
-1. Profile card component - [link](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ)
+1. ~~Profile card component - [link](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ)~~
+   - pr [#10](https://github.com/hui444/frontend-practices/pull/10)
 1. FAQ accordion card - [link](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam)
 1. Social proof section - [link](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA)
 1. Article preview component - [link](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
