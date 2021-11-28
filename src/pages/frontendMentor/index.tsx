@@ -6,6 +6,7 @@ import os_previewImage from '../../assets/frontendMentorInfo/order-summary-compo
 import sp_previewImage from '../../assets/frontendMentorInfo/stats-preview-card-component-main/design/desktop-preview.jpg';
 import cp_previewImage from '../../assets/frontendMentorInfo/3-column-preview-card-component-main/design/desktop-preview.jpg';
 import pc_previewImage from '../../assets/frontendMentorInfo/profile-card-component-main/design/desktop-preview.jpg';
+import fac_previewImage from '../../assets/frontendMentorInfo/faq-accordion-card-main/design/desktop-preview.jpg';
 
 const challengeDataSet: FMCard[] = [
   {
@@ -56,6 +57,17 @@ const challengeDataSet: FMCard[] = [
     withHTMLCSS: true,
     challengeLink: 'https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ',
     to: PATHS.PROFILE_CARD_CHALLENGE,
+  },
+  {
+    image: fac_previewImage,
+    title: 'FAQ accordion card',
+    description:
+      "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
+    difficulty: 1,
+    withHTMLCSS: true,
+    withJS: true,
+    challengeLink: 'https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam',
+    to: PATHS.FAQ_ACCORDION_CARD_CHALLENGE,
   },
 ];
 

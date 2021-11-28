@@ -6,4 +6,5 @@ export enum PATHS {
   STATS_PREVIEW_CARD_CHALLENGE = '/frontend-mentor/stats-preview-card',
   COL_PREVIEW_CARD_CHALLENGE = '/frontend-mentor/3-column-preview-card',
   PROFILE_CARD_CHALLENGE = '/frontend-mentor/profile-card',
+  FAQ_ACCORDION_CARD_CHALLENGE = '/frontend-mentor/faq-accordion-card',
 }
