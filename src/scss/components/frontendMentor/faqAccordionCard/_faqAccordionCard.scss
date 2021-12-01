@@ -1,0 +1,163 @@
+@use '../../../abstracts' as *;
+$fac-image--desktop: '../../../../assets/frontendMentorInfo/faq-accordion-card-main/images/illustration-woman-online-desktop.svg';
+$fac-image-background--desktop: '../../../../assets/frontendMentorInfo/faq-accordion-card-main/images/bg-pattern-desktop.svg';
+$fac-image-background--mobile: '../../../../assets/frontendMentorInfo/faq-accordion-card-main/images/bg-pattern-mobile.svg';
+
+.fac-card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'illustration content';
+  width: 80vw;
+  border-radius: 15px;
+  background-color: white;
+  font-family: $font--kumbh-sans;
+  font-weight: normal;
+  max-width: 50rem;
+  padding: 2rem 2rem 2rem 0;
+  min-height: 28rem;
+
+  @include mq($fac-mobile-breakpoint) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 'illustration' 'content';
+    padding: 0 2rem 2rem 2rem;
+  }
+  @include mq($fac-mobile-breakpoint--2) {
+    grid-template-rows: 1fr 5fr;
+  }
+}
+
+.fac-illustration__container {
+  grid-area: illustration;
+  flex: 1 1 50%;
+  background-image: url($fac-image--desktop), url($fac-image-background--desktop);
+  background-repeat: no-repeat;
+  background-position: -4rem 50%;
+  background-size: contain, cover;
+  position: relative;
+
+  .mobile-illustration {
+    display: none;
+  }
+
+  .floating-illustration {
+    display: block;
+    position: absolute;
+    height: clamp(6rem, 12vw, 8rem);
+    left: -4.5rem;
+    top: calc(50% - 3rem);
+    animation: hover 4s infinite;
+  }
+
+  @include mq($fac-image-breakpoint) {
+    background-size: contain;
+  }
+
+  @include mq($fac-mobile-breakpoint) {
+    background-size: contain;
+    background-size: 70%;
+    background-image: url($fac-image-background--mobile);
+    background-position: 50% -50%;
+
+    .mobile-illustration {
+      display: block;
+      object-fit: contain;
+      width: 70%;
+      margin: -35% auto auto;
+    }
+
+    .floating-illustration {
+      display: none;
+    }
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fac-content__container {
+  grid-area: content;
+  flex: 1 1 50%;
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  div + div {
+    border-top: 1px solid $fac__dividers--light-grayish-blue;
+  }
+
+  h3 {
+    font-weight: 700;
+    color: $fac__text--very-dark-saturated-blue;
+    font-size: 28px;
+  }
+
+  @include mq($fac-mobile-breakpoint) {
+    padding: 0;
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.fac-accordion__container {
+  flex: 1 1 100%;
+}
+
+.fac-accordion-question__container {
+  padding: 0.5em 0;
+}
+
+.fac-accordion__question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $fac__text--very-dark-grayish-blue;
+  cursor: pointer;
+  align-items: flex-start;
+  font-size: 15px;
+
+  h4 {
+    font-weight: normal;
+
+    &:hover {
+      color: $fac__text--soft-red;
+    }
+  }
+
+  img {
+    object-fit: contain;
+    margin: 10px 3px;
+    transition: transform 250ms ease;
+  }
+
+  &.active {
+    h4 {
+      font-weight: 700;
+
+      &:hover {
+        color: $fac__text--very-dark-grayish-blue;
+      }
+    }
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fac-accordion__answer {
+  color: $fac__text--dark-grayish-blue;
+  margin-top: 0.5em;
+  font-size: $fac-body;
+}
