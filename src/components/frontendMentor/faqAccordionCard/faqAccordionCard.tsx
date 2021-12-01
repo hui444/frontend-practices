@@ -43,7 +43,7 @@ const FaqAccordionCard = ({ questions }: { questions: Question[] }) => {
                   <h4>{question.question}</h4>
                   <img src={arrowIcon} alt="arrow icon" />
                 </div>
-                {isActive && <p className="fac-accordion__answer">{question.answer}</p>}{' '}
+                {isActive && <p className="fac-accordion__answer">{question.answer}</p>}
               </div>
             );
           })}
