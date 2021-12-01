@@ -14,12 +14,16 @@ $fac-image-background--mobile: '../../../../assets/frontendMentorInfo/faq-accord
   font-weight: normal;
   max-width: 50rem;
   padding: 2rem 2rem 2rem 0;
+  min-height: 28rem;
 
   @include mq($fac-mobile-breakpoint) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     grid-template-areas: 'illustration' 'content';
     padding: 0 2rem 2rem 2rem;
+  }
+  @include mq($fac-mobile-breakpoint--2) {
+    grid-template-rows: 1fr 5fr;
   }
 }
 
@@ -30,9 +34,19 @@ $fac-image-background--mobile: '../../../../assets/frontendMentorInfo/faq-accord
   background-repeat: no-repeat;
   background-position: -4rem 50%;
   background-size: contain, cover;
+  position: relative;
 
-  img {
+  .mobile-illustration {
     display: none;
+  }
+
+  .floating-illustration {
+    display: block;
+    position: absolute;
+    height: clamp(6rem, 12vw, 8rem);
+    left: -4.5rem;
+    top: calc(50% - 3rem);
+    animation: hover 4s infinite;
   }
 
   @include mq($fac-image-breakpoint) {
@@ -41,15 +55,32 @@ $fac-image-background--mobile: '../../../../assets/frontendMentorInfo/faq-accord
 
   @include mq($fac-mobile-breakpoint) {
     background-size: contain;
+    background-size: 70%;
     background-image: url($fac-image-background--mobile);
     background-position: 50% -50%;
 
-    img {
+    .mobile-illustration {
       display: block;
       object-fit: contain;
       width: 70%;
       margin: -35% auto auto;
     }
+
+    .floating-illustration {
+      display: none;
+    }
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -77,6 +108,10 @@ $fac-image-background--mobile: '../../../../assets/frontendMentorInfo/faq-accord
       text-align: center;
     }
   }
+}
+
+.fac-accordion__container {
+  flex: 1 1 100%;
 }
 
 .fac-accordion-question__container {

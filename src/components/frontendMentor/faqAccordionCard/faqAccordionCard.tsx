@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import arrowIcon from '../../../assets/frontendMentorInfo/faq-accordion-card-main/images/icon-arrow-down.svg';
 import mobileIllustration from '../../../assets/frontendMentorInfo/faq-accordion-card-main/images/illustration-woman-online-mobile.svg';
+import floatingIllustration from '../../../assets/frontendMentorInfo/faq-accordion-card-main/images/illustration-box-desktop.svg';
 
 export interface Question {
   question: string;
@@ -20,7 +21,16 @@ const FaqAccordionCard = ({ questions }: { questions: Question[] }) => {
   return (
     <div className="fac-card__container">
       <div className="fac-illustration__container">
-        <img src={mobileIllustration} alt="illustration of a woman looking at a big screen" />
+        <img
+          className="floating-illustration"
+          src={floatingIllustration}
+          alt="illustration of a woman looking at a big screen"
+        />
+        <img
+          className="mobile-illustration"
+          src={mobileIllustration}
+          alt="illustration of a woman looking at a big screen"
+        />
       </div>
       <div className="fac-content__container">
         <h3>FAQ</h3>
